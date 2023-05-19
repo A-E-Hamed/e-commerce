@@ -1,0 +1,40 @@
+.container{
+    display: flex;   
+}
+
+.content{
+    width: 100%;
+    padding-right: 1rem;
+    border-right-style: solid;
+    border-color: gray;
+}
+.content p{
+    font-family: 'Courgette', cursive;
+}
+.content hr{
+    width: 100%;
+}
+
+.small_container{
+    display: flex;
+}
+
+.readmore{
+    float: right;
+    font-size: small;
+    margin-top: 8px;
+    cursor: pointer;
+}
+span:hover{
+    color: grey;
+}
+
+.date_element{
+    font-size: x-small;
+    width: 90%;
+}
+
+.news_element p {
+    font-family:'Courgette', cursive ;
+}
+

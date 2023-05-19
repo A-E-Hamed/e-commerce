@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.side_nav{
+    width: 25%;
+}
+
+.default_content{
+    width: 75%;
+    float: left;
+}

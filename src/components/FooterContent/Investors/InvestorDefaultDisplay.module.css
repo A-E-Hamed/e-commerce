@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+
+}
+
+.content {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(102, 102, 102, 0.25);
+}
+
+.date_element {
+  font-size: medium;
+  font-family: 'Courgette', cursive;
+}
+
+.title_element {}
+
+.title_element h2 {
+  font-family: 'Courgette', cursive;
+}
+
+.small_container {
+  display: flex;
+}
+
+.hint {
+  width: 95%;
+  font-family: 'Courgette', cursive;
+}
+
+
+.readmore {
+  float: right;
+  font-size: small;
+  cursor: pointer;
+}
+
+.content_element {
+  margin-top: 20px;
+  font-family: 'Courgette', cursive;
+}

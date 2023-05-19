@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    background-color: #282A3A;
+    padding-left: 300px;
+    
+}
+
+.container ul{
+    color: white;
+    list-style: none;
+    padding: 0;
+}
+
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+.section{
+    margin: 2rem;
+    width: 20%;
+    
+}
+

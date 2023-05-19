@@ -1,0 +1,36 @@
+.container {
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    background-color: white;
+    margin: 25px;
+    display: flex;
+  }
+  .container img{
+    width: 300px;
+  }
+  .img_container{
+   
+  }
+  .product_info{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 250px;
+  }
+
+  .price_control_container{
+    display: flex;
+    margin-top: 45px;
+    justify-content: space-between;
+  }
+  .price_control{
+    display: flex;
+  }
+  .price_control h3{
+    margin-right:5px ;
+  }
+  
+  .price_control_button{
+    margin-left: 290px;
+    margin-top: 10px;
+  }

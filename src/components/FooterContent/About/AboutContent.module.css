@@ -1,0 +1,10 @@
+.container{
+    padding-left: 1rem;
+    border-radius: 3px;
+    background-color: rgb(233, 231, 231);
+}
+
+.container h2{
+    padding-top: 10px;
+    font-family: 'Courgette', cursive;
+}

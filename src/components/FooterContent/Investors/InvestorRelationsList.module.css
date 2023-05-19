@@ -1,0 +1,26 @@
+.container{
+    padding-left: 1rem;
+    border-radius: 3px;
+    background-color: rgb(238, 236, 236);
+}
+
+.container h1{
+    padding-top: 3rem;
+    margin-top: 0px;
+    font-family: 'Courgeztte', cursive;
+}
+
+.container h3{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-family: 'Courgette', cursive;
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+}
+
+.container a:hover{
+    color: rgb(124, 124, 124);
+}

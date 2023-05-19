@@ -1,0 +1,18 @@
+.main_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem;
+  text-align: center;
+  justify-content: center;
+  
+}
+.categoriesLoading {
+  text-align: center;
+  color: white;
+}
+
+.categoriesError {
+  text-align: center;
+  color: red;
+}
+

@@ -1,0 +1,66 @@
+.container hr{
+    margin-top: 30px;
+    width: 50%;
+}
+
+.first_section{
+    display: flex;
+    width: 100%;
+    
+}
+.content{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    width: 75%;
+}
+
+.content h2{
+    font-family: 'Courgette', cursive;
+}
+
+.content p{
+    font-family: 'Courgette', cursive;
+}
+
+.image_container{
+    float: right;
+    padding-top: 15px;
+
+}
+.first_section img{
+    width: 365px;
+    height: 340px;
+    float: left;
+}
+
+.second_section{
+    display: flex;
+    background-color: rgb(233, 231, 231);
+    width: 100%;
+}
+
+.about_content{
+    width: 60%;
+}
+
+.location{
+    padding-top: 10px;
+    padding-left: 2rem;
+    width: 40%;
+    float: left;
+    
+}
+.location h2{
+    font-family:'Courgette', cursive ;
+}
+
+.location ul{
+    padding-top: 18px;
+    
+}
+
+.location li{
+    padding-top: 1rem;
+    font-family:'Courgette', cursive ;
+}
