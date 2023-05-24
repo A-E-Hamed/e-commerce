@@ -1,0 +1,41 @@
+.mainContainer{
+    display: flex;
+}
+
+.card {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: white;
+  margin: 1rem;
+}
+
+.imgSection {
+  text-align: center;
+}
+.imgSection img {
+  height: 100px;
+}
+
+.description {
+  text-align: initial;
+  font-size: small;
+}
+
+.card h4 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.price_control {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  font-weight: bold;
+  gap: 2px;
+}
+.card a {
+  text-decoration: none;
+  color: black;
+}

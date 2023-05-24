@@ -1,4 +1,23 @@
 .container{
+    justify-content: center;
+}
+
+.top{
     display: flex;
     justify-content: center;
+}
+
+.middle{
+    width: 80%;
+    margin-left: 135px;
+    margin-top: 15px;
+    border-top: 2px solid;
+    border-color: gray;
+
+}
+
+.bottom{
+    justify-content: center;
+    display: flex;
+    
 }

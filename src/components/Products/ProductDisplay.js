@@ -5,7 +5,7 @@ import ProductForm from "./ProductForm";
 
 const ProductDisplay = (props) => {
   const cartCtx = useContext(CartContext);
-const price = `$${props.price.toFixed(2)}`;
+const price = `$${props.price}`;
   const addToCartHandler = (amount) => {
     cartCtx.addItem({
       key: props.id,
