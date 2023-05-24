@@ -20,8 +20,11 @@
 
 .right_side{
   display: flex;
-  gap: 2rem;
-  
+  gap: 2rem; 
+}
+
+.right_side a{
+  color: #2a292b;
 }
 .search_bar{
   border-radius: 25px;
@@ -33,6 +36,10 @@
  display: flex;
  align-items: center;
  gap: 20px;
+}
+
+.left_side a{
+  color: white;
 }
 
 .header ul {
@@ -49,7 +56,6 @@
 
 .header a {
   text-decoration: none;
-  color: white;
   font-weight: bold;
 }
 

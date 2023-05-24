@@ -15,15 +15,20 @@ const SearchBar = (props) => {
     setShowItemsList(true);
   };
 
-  useEffect(() => {
-    document.addEventListener("click", hideListHandler, true);
-  }, []);
-
   const hideListHandler = (event) => {
     if (!closeSearch.current.contains(event.target)) {
       setShowItemsList(false);
     }
   };
+
+  const setInput = (value) => {
+    setInputText(value);
+    setShowItemsList(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", hideListHandler, true);
+  }, []);
 
   return (
     <div className={classes.main} ref={closeSearch}>
@@ -35,7 +40,9 @@ const SearchBar = (props) => {
           onClick={showListHandler}
         />
       </div>
-      <div>{showItemsList && <ItemsList input={inputText} />}</div>
+      <div>
+        {showItemsList && <ItemsList input={inputText} setInput={setInput} />}
+      </div>
     </div>
   );
 };
