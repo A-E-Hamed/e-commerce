@@ -1,12 +1,17 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import AuthContext from "../../store/auth-context";
-import SearchBar from "../Search/SearchBar";
 import HeadderCartButton from "./HeadderCartButton";
-import classes from "./MainNavigation.module.css";
+import { Link } from "react-router-dom";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import classes from "./MainNavigation.module.css";
+import SearchBar from "../Search/SearchBar"
 const MainNavigation = (props) => {
-  
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLogggedIn;
 
@@ -15,48 +20,49 @@ const MainNavigation = (props) => {
   };
 
   return (
-    <header className={classes.header}>
-      <div className={classes.main_nav}>
-        <div className={classes.right_side}>
-          <Link to="/">
-            <div className={classes.logo}>The Store</div>
-          </Link>
-          <div className={classes.search_bar}>
-            <SearchBar />
-          </div>
-        </div>
-
-        <div className={classes.left_side}>
-          <div>
+    <Navbar bg="dark" expand="lg" variant="dark">
+      <Container className={classes.container}>
+        <Navbar.Brand href="/">The Store</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className={`${classes.rightSec} me-auto my-2 my-lg-0`}
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="#action2">New offers</Nav.Link>
+            <Form className="d-flex">
+              <SearchBar
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+            </Form>
+          </Nav>
+          <Nav className={classes.leftSec}>
             <HeadderCartButton onClick={props.onClick} />
-          </div>
-          <ul>
             {!isLoggedIn && (
-              <li>
-                <Link to="/auth">Login</Link>
-              </li>
+              <Link to="/auth">
+                <Button variant="dark">Login</Button>
+              </Link>
             )}
 
+            {isLoggedIn && <Nav.Link href="/profile">Profile</Nav.Link>}
             {isLoggedIn && (
-              <li>
-                <Link to="/profile">Profile</Link>
-              </li>
+              <Button
+                variant="dark"
+                className={classes.header_button}
+                onClick={logoutHandler}
+              >
+                Logout
+              </Button>
             )}
-
-            {isLoggedIn && (
-              <li>
-                <button
-                  className={classes.header_button}
-                  onClick={logoutHandler}
-                >
-                  Logout
-                </button>
-              </li>
-            )}
-          </ul>
-        </div>
-      </div>
-    </header>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

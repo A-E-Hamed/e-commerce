@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import classes from "./ItemsList.module.css";
 import { useState, useEffect } from "react";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const ItemsList = (props) => {
   const [categories, setCategories] = useState([]);
@@ -38,8 +38,6 @@ const ItemsList = (props) => {
     });
   }, [url]);
 
-  
-
   if (isLoading) {
     return;
   }
@@ -65,19 +63,18 @@ const ItemsList = (props) => {
 
   const data = filteredData.map((item) => {
     return (
-      <div className={classes.item}>
-        <Link
-          key={item.id}
-          to={`/content/${item.id}`}
-          onClick={handleLinkClick}
-        >
-          {item.name}
-        </Link>
-      </div>
+      <ListGroup.Item
+        action
+        href={`/content/${item.id}`}
+        key={item.id}
+        onClick={handleLinkClick}
+      >
+        {item.name}
+      </ListGroup.Item>
     );
   });
 
-  return <div className={classes.container}>{data}</div>;
+  return <ListGroup className={classes.container}>{data}</ListGroup>;
 };
 
 export default ItemsList;

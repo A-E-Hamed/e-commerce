@@ -1,6 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import ItemsList from "./ItemsList";
 import classes from "./SearchBar.module.css";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
+import { BiSearch } from "react-icons/bi";
 
 const SearchBar = (props) => {
   const [showItemsList, setShowItemsList] = useState(false);
@@ -28,22 +32,29 @@ const SearchBar = (props) => {
 
   useEffect(() => {
     document.addEventListener("click", hideListHandler, true);
+    return () => {
+      document.removeEventListener("click", hideListHandler, true);
+    };
   }, []);
 
   return (
-    <div className={classes.main} ref={closeSearch}>
-      <div className={classes.search_bar}>
-        <input
+    <Form className={classes.main} ref={closeSearch}>
+      <InputGroup>
+        <Form.Control
           type="text"
           placeholder="Search"
+          className="form-control"
           onChange={inputHandler}
           onClick={showListHandler}
         />
-      </div>
+        <Button variant="secondary" type="submit">
+          <BiSearch />
+        </Button>
+      </InputGroup>
       <div>
         {showItemsList && <ItemsList input={inputText} setInput={setInput} />}
       </div>
-    </div>
+    </Form>
   );
 };
 
