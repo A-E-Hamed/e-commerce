@@ -1,5 +1,5 @@
-.mainContainer{
-    display: flex;
+.mainContainer {
+  display: flex;
 }
 
 .card {
@@ -8,26 +8,30 @@
   border-radius: 14px;
   background-color: white;
   margin: 1rem;
-  
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
-.title{
+.title {
   text-align: center;
   margin-bottom: 0px;
 }
 
-.card img{
+.card img {
   width: 100px;
   height: 100px;
   display: block;
   margin: 0 auto;
 }
 
-.body{
-line-height: 1.25rem;
-margin-top: 0px;
+.body {
+  line-height: 1.25rem;
+  margin-top: 0px;
 }
-.cardFooter{
+.cardFooter {
   color: #2b6cb0;
   font-size: 1.125rem;
 }

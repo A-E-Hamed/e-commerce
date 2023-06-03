@@ -4,6 +4,13 @@
   border-radius: 14px;
   height: 230px;
   margin: 25px;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .title {

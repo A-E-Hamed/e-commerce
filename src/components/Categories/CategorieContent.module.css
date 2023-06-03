@@ -1,34 +1,37 @@
 .card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 14px;
-    background-color: white;
-  }
-  
-  .description{
-    text-align: initial;
-    font-size: medium;
-  }
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+  background-color: white;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+}
+.card:hover {
+  transform: scale(1.05);
+}
 
-  .price_control{
-    display: flex;
-    align-items: center;
-    height: 30px;
-    font-weight: bold;
-    gap: 2px;
-    
-  }
-  .card a{
-    text-decoration: none;
-    color: black;
-  }
+.description {
+  text-align: initial;
+  font-size: medium;
+}
 
-  .price{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.price_control {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  font-weight: bold;
+  gap: 2px;
+}
+.card a {
+  text-decoration: none;
+  color: black;
+}
 
-  .price p{
-    margin-bottom: 0;
-  }
-  
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price p {
+  margin-bottom: 0;
+}
