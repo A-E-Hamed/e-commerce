@@ -12,6 +12,7 @@ import CartProvider from "./store/CartProvider";
 import About from "./pages/About";
 import Investors from "./pages/Investors";
 import ProductPage from "./pages/ProductPage";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -26,29 +27,31 @@ function App() {
     setCartIsShown(false);
   };
   return (
-    <CartProvider>
-      <Layout onShowCart={cartShowHandler}>
-        {cartIsShown && <Cart onClose={cartHideHandler} />}
-        <Routes>
-          <Route path="/" exact element={<HomePage />} />
-          {!authCtx.isLogggedIn && (
-            <Route path="/auth" element={<AuthPage />} />
-          )}
-          {authCtx.isLogggedIn && (
-            <Route path="/profile" element={<UserProfile />} />
-          )}
-          {!authCtx.isLogggedIn && (
-            <Route path="/profile" element={<AuthPage />} />
-          )}
-          <Route path="/content/:id" element={<AvailableProducts />} />
-          <Route path="products/:type" element={<ProductPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/investors" element={<Investors />} />
-          <Route path="*" element={<HomePage />} />
-        </Routes>
-        <Footer />
-      </Layout>
-    </CartProvider>
+    <ChakraProvider>
+      <CartProvider>
+        <Layout onShowCart={cartShowHandler}>
+          {cartIsShown && <Cart onClose={cartHideHandler} />}
+          <Routes>
+            <Route path="/" exact element={<HomePage />} />
+            {!authCtx.isLogggedIn && (
+              <Route path="/auth" element={<AuthPage />} />
+            )}
+            {authCtx.isLogggedIn && (
+              <Route path="/profile" element={<UserProfile />} />
+            )}
+            {!authCtx.isLogggedIn && (
+              <Route path="/profile" element={<AuthPage />} />
+            )}
+            <Route path="/content/:id" element={<AvailableProducts />} />
+            <Route path="products/:type" element={<ProductPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/investors" element={<Investors />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+          <Footer />
+        </Layout>
+      </CartProvider>
+    </ChakraProvider>
   );
 }
 

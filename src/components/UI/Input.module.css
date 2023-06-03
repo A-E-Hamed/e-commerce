@@ -8,9 +8,9 @@
   
   
   .input input {
-    width: 3rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #ccc;
     font: inherit;
     padding-left: 0.5rem;
+    height: 30px;
   }

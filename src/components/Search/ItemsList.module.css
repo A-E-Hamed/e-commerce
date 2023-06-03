@@ -2,4 +2,5 @@
     background-color: white;
     position: absolute;
     width: 247px;
+    z-index: 1;
 }

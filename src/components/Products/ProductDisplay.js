@@ -1,11 +1,22 @@
 import { useContext } from "react";
 import CartContext from "../../store/cart-context";
+import {
+  Text,
+  Heading,
+  Image,
+  Stack,
+  Card,
+  CardBody,
+  CardFooter,
+  Flex,
+} from "@chakra-ui/react";
 import classes from "./ProductDisplay.module.css";
 import ProductForm from "./ProductForm";
+import RatingStars from "../UI/RatingStars";
 
 const ProductDisplay = (props) => {
   const cartCtx = useContext(CartContext);
-const price = `$${props.price}`;
+  const price = `$${props.price}`;
   const addToCartHandler = (amount) => {
     cartCtx.addItem({
       key: props.id,
@@ -17,28 +28,35 @@ const price = `$${props.price}`;
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.img_container}>
-        <img src={props.image} alt="description" />
-      </div>
-      <div className={classes.product_info}>
-        <h1>{props.name}</h1>
-        {props.description}|
-        <div className={classes.price_control_container}>
-          <div className={classes.price_control}>
-            <div>
-              <h3>Price:</h3>
-            </div>
-            <div>
-              <h4>{price}</h4>
-            </div>
-          </div>
-          <div>
-            <ProductForm onAddToCart={addToCartHandler} />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Card
+      direction={{ base: "column", sm: "row" }}
+      overflow="hidden"
+      variant="outline"
+    >
+      <Image
+        objectFit="cover"
+        maxW={{ base: "100%", sm: "200px" }}
+        src={props.image}
+        alt="Caffe Latte"
+      />
+
+      <Stack>
+        <CardBody>
+          <Heading size="md">{props.name}</Heading>
+          <Text py="2">{props.description}</Text>
+        </CardBody>
+
+        <CardFooter className={classes.cardFooter}>
+          <Flex className={classes.price}>
+            <Text color="blue.600" fontSize="lg">
+              {price}
+            </Text>
+            <RatingStars />
+          </Flex>
+          <ProductForm onAddToCart={addToCartHandler} />
+        </CardFooter>
+      </Stack>
+    </Card>
   );
 };
 

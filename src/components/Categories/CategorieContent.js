@@ -1,23 +1,51 @@
 import { Link } from "react-router-dom";
 import classes from "./CategorieContent.module.css";
+import {
+  Button,
+  Text,
+  Heading,
+  Image,
+  Stack,
+  Card,
+  CardBody,
+  Divider,
+  Box,
+  Flex,
+} from "@chakra-ui/react";
+import RatingStars from "../UI/RatingStars";
 
 const CategorieContent = (props) => {
-
   return (
-    <div className={classes.card}>
+    <Card maxW="xs">
       <Link to={`/products/${props.id}`} state={props.lable}>
-        <h2>{props.name}</h2>
-        <div>
-          <img src={props.image} alt="description" />
-        </div>
-        <div className={classes.description}>{props.description}</div>
-        <div className={classes.price_control}>
-          <p>Price:</p>
-          {props.price}
-          <p>$</p>
-        </div>
+        <CardBody className={classes.card}>
+          <Heading size="md">{props.name}</Heading>
+          <Divider />
+          <Image
+            src={props.image}
+            alt="Description"
+            borderRadius="lg"
+            width="150px"
+            height="150px"
+            objectFit="contain"
+            display="block"
+            margin="0 auto"
+          />
+          <Stack mt="1" spacing="0">
+            <Text>{props.description}</Text>
+            <Flex className={classes.price}>
+              <Text color="blue.600" fontSize="lg">
+                ${props.price}
+              </Text>
+              <RatingStars />
+            </Flex>
+            <Button variant="solid" colorScheme="blue">
+              Add to cart
+            </Button>
+          </Stack>
+        </CardBody>
       </Link>
-    </div>
+    </Card>
   );
 };
 
