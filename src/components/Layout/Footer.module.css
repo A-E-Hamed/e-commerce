@@ -1,24 +1,25 @@
-.container{
-    display: flex;
-    background-color: #282A3A;
-    padding-left: 300px;
-    
+.container {
+  display: flex;
+  background-color: #242c3a;
+  justify-content: space-around;
+  text-align: center;
 }
 
-.container ul{
-    color: white;
-    list-style: none;
-    padding: 0;
+.container h3 {
+  color: white;
 }
 
-.container a{
-    text-decoration: none;
-    color: white;
+.container ul {
+  color: white;
+  list-style: none;
+  padding: 0;
 }
 
-.section{
-    margin: 2rem;
-    width: 20%;
-    
+.container a {
+  text-decoration: none;
+  color: white;
 }
 
+.section {
+  margin: 2rem;
+}
