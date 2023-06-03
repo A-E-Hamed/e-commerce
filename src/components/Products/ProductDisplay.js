@@ -45,7 +45,6 @@ const ProductDisplay = (props) => {
           <Heading size="md">{props.name}</Heading>
           <Text py="2">{props.description}</Text>
         </CardBody>
-
         <CardFooter className={classes.cardFooter}>
           <Flex className={classes.price}>
             <Text color="blue.600" fontSize="lg">

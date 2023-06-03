@@ -9,7 +9,6 @@ import {
   Card,
   CardBody,
   Divider,
-  Box,
   Flex,
 } from "@chakra-ui/react";
 import RatingStars from "../UI/RatingStars";
@@ -40,7 +39,7 @@ const CategorieContent = (props) => {
               <RatingStars />
             </Flex>
             <Button variant="solid" colorScheme="blue">
-              Add to cart
+              View Product
             </Button>
           </Stack>
         </CardBody>

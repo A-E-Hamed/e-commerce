@@ -8,34 +8,26 @@
   border-radius: 14px;
   background-color: white;
   margin: 1rem;
+  
 }
 
-.imgSection {
+.title{
   text-align: center;
-}
-.imgSection img {
-  height: 100px;
-}
-
-.description {
-  text-align: initial;
-  font-size: small;
-}
-
-.card h4 {
-  margin-top: 5px;
   margin-bottom: 0px;
-  text-align: center;
 }
 
-.price_control {
-  display: flex;
-  align-items: center;
-  height: 30px;
-  font-weight: bold;
-  gap: 2px;
+.card img{
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
 }
-.card a {
-  text-decoration: none;
-  color: black;
+
+.body{
+line-height: 1.25rem;
+margin-top: 0px;
+}
+.cardFooter{
+  color: #2b6cb0;
+  font-size: 1.125rem;
 }
