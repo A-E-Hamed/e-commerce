@@ -1,10 +1,36 @@
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 14px;
-  background-color: white;
   transition: transform 0.2s ease-in-out;
   transform: scale(1);
 }
+
+.lightBackground {
+  background-color: white;
+  color: #121212;
+}
+
+.darkBackground {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.darkBtn {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.lightBtn {
+  background-color: #3182ce !important;
+  color: #ffffff !important;
+}
+
+.darkBtn:hover {
+  background-color: #202020 !important;
+}
+.lightBtn:hover {
+  background-color: #549ee2 !important;
+}
+
 .card:hover {
   transform: scale(1.05);
 }

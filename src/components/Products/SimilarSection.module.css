@@ -1,8 +1,7 @@
-.similarSection{
+.similarSection {
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin-bottom: 20px;
-
-  
+  gap: 20px;
 }

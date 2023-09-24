@@ -30,7 +30,6 @@
 
 .actions button {
   font: inherit;
-  color: #5a1a01;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -40,7 +39,7 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #ffe6dc;
+  background-color: #5a1a01;
 }
 
 .actions .submit {

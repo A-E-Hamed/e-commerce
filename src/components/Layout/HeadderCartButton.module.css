@@ -2,7 +2,7 @@
     cursor: pointer;
     font: inherit;
     border: none;
-    background-color: #2a292b;
+    background-color: #5c636a;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -28,7 +28,7 @@
   }
   
   .badge {
-    background-color: #484545;
+    background-color: #706e6e;
     padding: 0.25rem 1rem;
     border-radius: 25px;
     margin-left: .25rem;

@@ -10,11 +10,17 @@ import {
   CardFooter,
   Flex,
 } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import classes from "./ProductDisplay.module.css";
 import ProductForm from "./ProductForm";
 import RatingStars from "../UI/RatingStars";
 
 const ProductDisplay = (props) => {
+  const { colorMode } = useColorMode();
+  const cardClass =
+    colorMode === "dark" ? classes.darkBackground : classes.lightBackground;
+    
+
   const cartCtx = useContext(CartContext);
   const price = `$${props.price}`;
   const addToCartHandler = (amount) => {
@@ -32,6 +38,7 @@ const ProductDisplay = (props) => {
       direction={{ base: "column", sm: "row" }}
       overflow="hidden"
       variant="outline"
+      className={`${cardClass}`}
     >
       <Image
         objectFit="cover"

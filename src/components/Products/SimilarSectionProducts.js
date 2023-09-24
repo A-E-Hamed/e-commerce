@@ -1,20 +1,21 @@
-import { Link } from "react-router-dom";
-import classes from "./CategorieContent.module.css";
 import {
-  Button,
-  Text,
   Heading,
   Image,
-  Stack,
   Card,
   CardBody,
   Divider,
   Flex,
+  SimpleGrid,
+  Stack,
+  Button,
+  Text,
 } from "@chakra-ui/react";
 import RatingStars from "../UI/RatingStars";
+import classes from './SimilarSectionDisplay.module.css';
 import { useColorMode } from "@chakra-ui/react";
 
-const CategorieContent = (props) => {
+
+const SimilarSectionProducts = (props) => {
   const { colorMode } = useColorMode();
   const cardClass =
     colorMode === "dark" ? classes.darkBackground : classes.lightBackground;
@@ -22,10 +23,13 @@ const CategorieContent = (props) => {
     colorMode === "dark" ? classes.darkBtn : classes.lightBtn;
 
   return (
-    <Card maxW="xs">
-      <Link to={`/products/${props.id}`} state={props.lable}>
+    <SimpleGrid
+      templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+    >
+      <Card maxW="xs">
+      
         <CardBody className={`${classes.card} ${cardClass}`}>
-          <Heading size="md">{props.name}</Heading>
+          <Heading size="sm" className={classes.title}>{props.name}</Heading>
           <Divider />
           <Image
             src={props.image}
@@ -35,10 +39,10 @@ const CategorieContent = (props) => {
             display="block"
             margin="0 auto"
           />
-          <Stack mt="1" spacing="0">
-            <Text>{props.description}</Text>
-            <Flex className={classes.price}>
-              <Text color="blue.600" fontSize="lg">
+          <Stack>
+            <Text className={classes.body}>{props.description}</Text>
+            <Flex className={classes.footer}>
+              <Text color="blue.600" fontSize="lg" >
                 ${props.price}
               </Text>
               <RatingStars />
@@ -48,9 +52,10 @@ const CategorieContent = (props) => {
             </Button>
           </Stack>
         </CardBody>
-      </Link>
+      
     </Card>
+    </SimpleGrid>
   );
 };
 
-export default CategorieContent;
+export default SimilarSectionProducts;

@@ -13,7 +13,11 @@
     margin-top: 15px;
     border-top: 2px solid;
     border-color: gray;
+    margin-bottom: 25px;
+}
 
+.middle h3{
+    padding-top: 15px;
 }
 
 .bottom{

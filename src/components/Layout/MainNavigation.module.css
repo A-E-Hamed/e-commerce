@@ -1,3 +1,14 @@
+
+.lightBackground {
+  background-color: #e9e0de;
+  color: #121212;
+}
+
+.darkBackground {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 .container{
   gap: 35px;
 }

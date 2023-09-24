@@ -1,42 +1,44 @@
+import { List, ListItem, UnorderedList, useColorMode } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import classes from "./Footer.module.css";
 
 const Footer = () => {
-    return (
-        <div className={classes.container}>
-            <div className={classes.section}>
-                <h3>Get to know us</h3>
-                <ul>
-                    <Link to={'/about'}>
-                        <li>About The Store</li>
-                    </Link>
-                    <Link to={'/investors'}>
-                        <li>The Store investors</li>
-                    </Link>
-                </ul>
-            </div>
+  const { colorMode } = useColorMode();
+  const containerClass =
+    colorMode === "dark" ? classes.darkBackground : classes.lightBackground;
 
-            <div className={classes.section}>
-                <h3>Make money </h3>
-                <ul>
-                    <li>Sell on The Store</li>
-                    <li>Invest with new ideas</li>
-                </ul>
 
-            </div>
-            <div className={classes.section}>
-                <h3>Contact us</h3>
-                <ul>
-                    <li>Send a message</li>
-                    <li>Call us</li>
-                    <li>Help</li>
-                </ul>
-
-            </div>
-        </div>
-    );
-
+  return (
+    <List className={`${classes.container} ${containerClass}`}>
+      <UnorderedList>
+        <ListItem className={classes.listHeading}>Get To Know Us</ListItem>
+        <Link to={"/about"}>
+          <ListItem>About The Store</ListItem>
+        </Link>
+        <Link to={"/investors"}>
+          <ListItem>The Store investors</ListItem>
+        </Link>
+      </UnorderedList>
+      <UnorderedList>
+        <ListItem className={classes.listHeading}>Make Money</ListItem>
+        <Link>
+          <ListItem>Invest with us</ListItem>
+        </Link>
+        <Link>
+          <ListItem>Sell on The Store</ListItem>
+        </Link>
+      </UnorderedList>
+      <UnorderedList>
+        <ListItem className={classes.listHeading}>Contact Us</ListItem>
+        <Link>
+          <ListItem>Send a message</ListItem>
+        </Link>
+        <Link>
+          <ListItem>Help</ListItem>
+        </Link>
+      </UnorderedList>
+    </List>
+  );
 };
-
 
 export default Footer;

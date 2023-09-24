@@ -1,13 +1,22 @@
-.cardFooter{
+.cardFooter {
   justify-content: space-between;
 }
 
-.price{
+.price {
   align-items: center;
   gap: 20px;
 }
 
-.price p{
+.price p {
   margin-bottom: 0px;
+}
 
+.lightBackground {
+  background-color: white;
+  color: #121212;
+}
+
+.darkBackground {
+  background-color: #333333 !important;
+  color: #ffffff;
 }

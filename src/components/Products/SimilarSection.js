@@ -1,7 +1,7 @@
 import classes from "./SimilarSection.module.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import SimilarSectionDisplay from "./SimilarSectionDisplay";
+import SimilarSectionProducts from "./SimilarSectionProducts";
 
 const SimilarSection = () => {
   const [similarProducts, setSimilarProducts] = useState([]);
@@ -56,7 +56,7 @@ const SimilarSection = () => {
   }
 
   const similiarProductList = similarProducts.map((simiProduct) => (
-    <SimilarSectionDisplay
+    <SimilarSectionProducts
       key={simiProduct.id}
       id={simiProduct.id}
       name={simiProduct.name}
@@ -64,7 +64,9 @@ const SimilarSection = () => {
       description={simiProduct.description}
       price={simiProduct.price}
     />
+    
   ));
+  
 
   return <div className={classes.similarSection}>{similiarProductList}</div>;
 };

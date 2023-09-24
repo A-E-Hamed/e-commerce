@@ -1,9 +1,13 @@
 import classes from "./ProductForm.module.css";
 import { useRef } from "react";
 import Input from "../UI/Input";
-import { Button} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 
 const ProductForm = (props) => {
+  const { colorMode } = useColorMode();
+  const btnClass = colorMode === "dark" ? classes.darkBtn : classes.lightBtn;
+
   const amountInputRef = useRef();
   const submitHandler = (event) => {
     event.preventDefault();
@@ -26,10 +30,7 @@ const ProductForm = (props) => {
             defaultValue: "1",
           }}
         />
-        <Button
-          colorScheme="blue"
-          onClick={submitHandler}
-        >
+        <Button onClick={submitHandler} className={`${btnClass}`}>
           Add to cart
         </Button>
       </div>

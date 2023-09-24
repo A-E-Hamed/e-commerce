@@ -7,6 +7,24 @@
 }
 
 
+.darkBtn {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.lightBtn {
+  background-color: #3182ce !important;
+  color: #ffffff !important;
+}
+
+.darkBtn:hover {
+  background-color: #202020 !important;
+}
+.lightBtn:hover {
+  background-color: #549ee2 !important;
+}
+
+
   .bump {
     animation: bump 300ms ease-out;
   }

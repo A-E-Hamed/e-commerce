@@ -1,25 +1,42 @@
 .container {
   display: flex;
-  background-color: #242c3a;
   justify-content: space-around;
   text-align: center;
+  padding-left: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
 }
 
-.container h3 {
-  color: white;
+.lightBackground {
+  background-color: #18263d;
+  color: #ffffff;
 }
+
+.darkBackground {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.listHeading{
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
 
 .container ul {
-  color: white;
+  
   list-style: none;
   padding: 0;
+  
 }
 
 .container a {
   text-decoration: none;
-  color: white;
+  
+  font-size:smaller;
 }
 
-.section {
-  margin: 2rem;
-}
+
+

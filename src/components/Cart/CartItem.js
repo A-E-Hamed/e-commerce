@@ -1,6 +1,12 @@
 import classes from "./CartItem.module.css";
+import { useColorMode } from "@chakra-ui/react";
+
 
 const CartItem = (props) => {
+  const { colorMode } = useColorMode();
+  const cardClass =
+    colorMode === "dark" ? classes.darkBackground : classes.lightBackground;
+
   const price = `$${props.price}`;
   console.log(typeof(props.price));
   console.log(props);
@@ -9,7 +15,7 @@ const CartItem = (props) => {
 
   return (
     <div className={classes["cart-item"]}>
-      <div>
+      <div className={`${cardClass}`}>
         <h2>{props.name}</h2>
         <div className={classes.summary}>
           <span className={classes.price}>{price}</span>
